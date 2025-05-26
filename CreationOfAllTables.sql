@@ -19,7 +19,7 @@ shift_type VARCHAR(100) not null
 )
 
 CREATE TABLE doctor_schedule (
-  schedule_id INT PRIMARY KEY NOT NULL,
+  schedule_id SERIAL INT  PRIMARY KEY NOT NULL,
   doctor_id INT,
   work_date DATE NOT NULL,
   start_time TIME NOT NULL,
@@ -47,8 +47,6 @@ foreign key (shift_id) references shift(shift_id),
 foreign key (doctor_level_id) references doctor_level(doctor_level_id),
 foreign key (schedule_id) references doctor_schedule(schedule_id)
 );
-
-
 
 
 create table emergency_state(
