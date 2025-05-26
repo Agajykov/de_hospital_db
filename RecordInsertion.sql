@@ -276,4 +276,35 @@ INSERT INTO patient_food (
 (10, '08:00:00', 'Food', 10, 2, 'Low-Protein');        -- Kidney Failure → Cardiology
 
 
+INSERT INTO patient_transport (
+  transport_employee_id, shift_id, transport_employee_name, patient_id,
+  pick_up_dep_id, drop_dep_id, pick_up_time, pick_up_priority,
+  transport_type, one_way_two_way, transport_body_type
+) VALUES
+(1, 4, 'Klaus Zimmermann', 1, 2, 5, '08:30:00', 'Normal', 'Wheelchair', 'One-Way', 'Adult'),  -- Hypertension → Radiology
+(2, 5, 'Sarah Krüger', 2, 15, 10, '13:15:00', 'Normal', 'Walking Assist', 'Two-Way', 'Adult'),  -- ENT → Outpatient Check
+(3, 7, 'Tom Berger', 3, 6, 8, '22:00:00', 'Emergency', 'Stretcher', 'One-Way', 'Critical'),      -- COVID → ICU
+(4, 4, 'Lea Stein', 4, 2, 12, '09:00:00', 'High', 'Wheelchair', 'Two-Way', 'Adult'),             -- Diabetes → Pharmacy
+(5, 5, 'Nina Scholz', 5, 2, 11, '14:45:00', 'Normal', 'Wheelchair', 'One-Way', 'Elderly'),       -- Stroke → Physiotherapy
+(6, 7, 'Markus Lange', 6, 2, 6, '23:10:00', 'Emergency', 'Stretcher', 'One-Way', 'Critical'),    -- Heart Attack → Emergency
+(7, 4, 'Tobias Klein', 7, 6, 4, '07:45:00', 'High', 'Bed', 'One-Way', 'Pediatric'),              -- Pneumonia → Pediatrics
+(8, 5, 'Johanna Vogel', 8, 13, 10, '15:20:00', 'Normal', 'Crutches', 'Two-Way', 'Adult'),        -- Fractured leg → Outpatient
+(9, 5, 'Michael Werner', 9, 1, 10, '16:10:00', 'Low', 'Walking Assist', 'One-Way', 'Adult'),     -- Migraine → Outpatient
+(10, 7, 'Emily Nowak', 10, 2, 8, '21:30:00', 'High', 'Bed', 'One-Way', 'Critical');              -- Kidney Failure → ICU
+
+INSERT INTO doctor_patient_nurse (
+  dpn_id, doctor_id, patient_id, nurse_id, department_id, shift_id, medication_given, care_date
+) VALUES
+(1, 1, 1, 1, 4, 4, 'Amlodipine, Aspirin', '2025-05-01'),
+(2, 3, 3, 3, 6, 5, 'Remdesivir, Paracetamol', '2025-05-02'),
+(3, 5, 6, 6, 6, 7, 'Nitroglycerin, Atorvastatin', '2025-05-03'),
+(4, 7, 7, 7, 8, 4, 'Azithromycin, Oxygen', '2025-05-04'),
+(5, 9, 9, 9, 4, 5, 'Sumatriptan, Ibuprofen', '2025-05-05'),
+(6, 12, 10, 12, 5, 7, 'Epoetin alfa, Furosemide', '2025-05-06'),
+(7, 14, 5, 14, 5, 4, 'Aspirin, Clopidogrel', '2025-05-07'),
+(8, 15, 2, 15, 4, 5, 'Salbutamol, Prednisolone', '2025-05-08'),
+(9, 17, 4, 17, 6, 7, 'Metformin, Insulin', '2025-05-09'),
+(10, 18, 8, 18, 4, 4, 'Diclofenac, Calcium', '2025-05-10');
+
+
 
