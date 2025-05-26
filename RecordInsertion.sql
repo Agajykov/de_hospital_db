@@ -246,3 +246,34 @@ INSERT INTO nurse (nurse_id, name, shift_id, nurse_specialisation_id, nurse_sche
 (40, 'Niklas Otto', 4, 21, 40, 19);
 
 
+INSERT INTO patient (
+  patient_id, name, date_of_birth, gender, address, phone_number, emergency_state_id,
+  insurance_number, diagnose, contact_person_number, infection_status, blood_type_id
+) VALUES
+(1, 'Anna Becker', '1985-06-12', 'Female', 'Main Street 1, Berlin', '015112345678', 4, 'INS-001', 'Hypertension', '015198765432', 'Negative', 1),
+(2, 'Max Müller', '1990-02-28', 'Male', 'Lindenweg 5, Hamburg', '015212345679', 5, 'INS-002', 'Asthma', '015198765433', 'Negative', 3),
+(3, 'Lisa Schneider', '2001-11-03', 'Female', 'Bergstraße 9, Munich', '015312345680', 6, 'INS-003', 'COVID-19', '015198765434', 'Positive', 6),
+(4, 'Tom Fischer', '1978-07-19', 'Male', 'Hauptstraße 18, Cologne', '015412345681', 4, 'INS-004', 'Diabetes Type 2', '015198765435', 'Negative', 7),
+(5, 'Emma Wagner', '1964-01-14', 'Female', 'Wiesenweg 3, Stuttgart', '015512345682', 5, 'INS-005', 'Stroke', '015198765436', 'Negative', 2),
+(6, 'David Schulz', '1955-03-29', 'Male', 'Seestraße 7, Frankfurt', '015612345683', 6, 'INS-006', 'Heart Attack', '015198765437', 'Positive', 4),
+(7, 'Julia Hoffmann', '2003-09-23', 'Female', 'Goethestraße 12, Leipzig', '015712345684', 5, 'INS-007', 'Pneumonia', '015198765438', 'Negative', 8),
+(8, 'Felix Braun', '1999-12-11', 'Male', 'Kaiserstraße 4, Dresden', '015812345685', 4, 'INS-008', 'Fractured Leg', '015198765439', 'Negative', 1),
+(9, 'Marie König', '1988-08-08', 'Female', 'Rathausplatz 6, Düsseldorf', '015912345686', 4, 'INS-009', 'Migraine', '015198765440', 'Negative', 5),
+(10, 'Leon Weber', '1975-04-30', 'Male', 'Parkallee 15, Bremen', '016012345687', 6, 'INS-010', 'Kidney Failure', '015198765441', 'Positive', 3);
+
+INSERT INTO patient_food (
+  food_id, meal_time, meal_type, patient_id, department_id, food_sort
+) VALUES
+(1, '08:00:00', 'Food', 1, 2, 'Low-Sodium'),           -- Hypertension → Cardiology
+(2, '12:30:00', 'Drink', 2, 15, 'Standard'),           -- Asthma → ENT
+(3, '18:30:00', 'Food', 3, 6, 'Vegan'),                -- COVID-19 → Emergency Room
+(4, '08:00:00', 'Food', 4, 2, 'Diabetic-Friendly'),    -- Diabetes → Cardiology
+(5, '12:30:00', 'Drink', 5, 2, 'Vegetarian'),          -- Stroke → Cardiology
+(6, '18:30:00', 'Food', 6, 2, 'Muslim'),               -- Heart Attack → Cardiology
+(7, '08:00:00', 'Drink', 7, 4, 'Standard'),            -- Pneumonia (child) → Pediatrics
+(8, '12:30:00', 'Food', 8, 13, 'High-Calcium'),        -- Fractured Leg → Orthopedics
+(9, '18:30:00', 'Drink', 9, 1, 'Vegetarian'),          -- Migraine → Neurology
+(10, '08:00:00', 'Food', 10, 2, 'Low-Protein');        -- Kidney Failure → Cardiology
+
+
+
