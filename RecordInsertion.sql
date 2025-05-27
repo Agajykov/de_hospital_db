@@ -306,5 +306,16 @@ INSERT INTO doctor_patient_nurse (
 (9, 17, 4, 17, 6, 7, 'Metformin, Insulin', '2025-05-09'),
 (10, 18, 8, 18, 4, 4, 'Diclofenac, Calcium', '2025-05-10');
 
+UPDATE patient SET admission_date = '2025-04-02' WHERE patient_id = 1;
+UPDATE patient SET admission_date = '2025-04-02' WHERE patient_id = 2;
+UPDATE patient SET admission_date = '2025-04-15' WHERE patient_id = 3;
+UPDATE patient SET admission_date = '2025-04-22' WHERE patient_id = 4;
+UPDATE patient SET admission_date = '2025-04-28' WHERE patient_id = 5;
+UPDATE patient SET admission_date = '2025-04-30' WHERE patient_id = 6;
+UPDATE patient SET admission_date = '2025-05-01' WHERE patient_id = 7;
+UPDATE patient SET admission_date = '2025-05-02' WHERE patient_id = 8;
+UPDATE patient SET admission_date = '2025-05-09' WHERE patient_id = 9;
+UPDATE patient SET admission_date = '2025-05-14' WHERE patient_id = 10;
+
 
 
